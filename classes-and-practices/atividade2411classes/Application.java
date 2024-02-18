@@ -1,5 +1,7 @@
 package atividade2411classes;
 
+import compraevenda.Fatura;
+
 public class Application {
 
 	public static void main(String[] args) {
