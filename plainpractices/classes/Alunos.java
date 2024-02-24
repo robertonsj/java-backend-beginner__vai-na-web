@@ -1,4 +1,4 @@
-package classes;
+package plainpractices.classes;
 
 public class Alunos {
 	String nome;
@@ -11,4 +11,9 @@ public class Alunos {
 		this.nome = nome;
 		this.idade = idade;
 	}
+	@Override
+	public String toString() {
+		return "[nome=" + nome + ", idade=" + idade + "]";
+	}
+	
 }

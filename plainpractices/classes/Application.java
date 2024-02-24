@@ -1,33 +1,22 @@
-package classes;
+package plainpractices.classes;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Application {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner scan = new Scanner(System.in);
 		
-		List<Alunos> lista = new ArrayList<>();
+		List<Alunos> alunos = new ArrayList<Alunos>();
+	
+		alunos.add(new Alunos("Roberto", 20));
+		alunos.add(new Alunos("Rayane", 25));
+		alunos.add(new Alunos("Jose", 30));
+		alunos.add(new Alunos("Francisco", 20));
 		
-		for(int i = 0; i < 3; i++) {
-			Alunos aluno;
-			System.out.println("=======================");
-			System.out.println("User " + (i+1) + "º");
-			System.out.print("Their name: ");
-			String nome = scan.nextLine();
-			System.out.print("Their age: ");
-			int idade = scan.nextInt();
-			
-			lista.add(new Alunos(nome, idade));
-		}
 		
-		for(Alunos a : lista) {
-			System.out.println("#####################");
-			System.out.println("Nome: " + a.nome + "idade: " + a.idade);
-		}
+		alunos.forEach(aluno -> System.out.println(aluno.toString()));
 	}
 
 }
