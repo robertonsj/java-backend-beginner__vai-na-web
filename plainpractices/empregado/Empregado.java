@@ -1,12 +1,12 @@
-package atividade2411classes;
+package plainpractices.empregado;
 
 public class Empregado {
 	protected String nome;
-	protected String cpf;
 	protected double salario;
 	
-	public Empregado(double salario2) {
-		this.salario = salario2;
+	public Empregado(String nome, double salario) {
+		this.nome = nome;
+		this.salario = salario;
 	}
 	
 	public double salarioAnual() {

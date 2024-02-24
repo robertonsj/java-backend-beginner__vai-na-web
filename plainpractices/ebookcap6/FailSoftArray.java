@@ -40,6 +40,16 @@ public class FailSoftArray {
 		return errorValue;
 	}
 	
+	public void insertValue(int value) {
+		for(int i = 0; i < ourArray.length; i++) {
+			if(ourArray[i] == 0) {
+				ourArray[i] = value;
+				System.out.println("The value was alocated into the array");
+				return;
+			}
+		}
+		System.out.println("There is not memory address space avaliable.");
+	}
 	public void insertValue(int value, int index) {
 		if(indexOK(index)) {
 			ourArray[index] = value;
@@ -50,12 +60,9 @@ public class FailSoftArray {
 		
 	}
 
+	@Override
 	public String toString() {
-//		return "FailSoftArray [ourArray=" + Arrays.toString(ourArray) + "]";
-		return ourArray.toString();
+		return "FailSoftArray [ourArray=" + Arrays.toString(ourArray) + "]";
 	}
-	
-	
-	
 
 }
